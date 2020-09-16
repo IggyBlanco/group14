@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    shrink-to-fit=no">
+  <title>
+    Liaison - Log In
+  </title>
+  <!--javascript-->
+  <script type="text/javascript" src="js/md5.js"></script>
+  <script type="text/javascript" src="js/code.js"></script>
+  <!--bootstrap-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!--template css-->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+  <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!--favicon-->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+</head>
+
+<body>
+  <div class="row">
+    <div class="column-dark col-md-3">
+        
+      <h1>
+        Welcome!
+      </h1>
+      
+      <h5 class="font-weight-light">
+        Log in to begin managing your contacts.
+        If you are new to Liaison, click the sign up link.
+      </h5>
+      
+    </div>
+    
+    <div class="login-dark col-md-9">
+        
+      <h1 class="center font-weight-bold display-1">
+        Liaison
+      </h1>
+      
+      <form action="LAMPAPI/Login.php" method="POST">
+          
+      <h2 class="text-center font-weight-light">
+        Log In
+      </h2>
+        
+      <div class="illustration">
+        <i class="icon ion-android-contacts">
+        </i>
+      </div>
+        
+      <div class="form-group">
+        <input class="form-control" type="text"
+        id="loginName" placeholder="Username">
+        
+        <input class="form-control" type="password"
+        id="loginPassword" placeholder="Password">
+    
+        <button class="btn btn-primary btn-block" type="button"
+        id="loginButton"  onclick="doLogin();">
+          Log In
+        </button>
+      
+        <span id="loginResult"></span>
+      </div>
+      
+      <a class="text-center" href="register.html">
+        New to Liaison? Sign up here.
+      </a>
+      
+      </form>
+      
+    </div>
+  </div>
+</body>
+
+</html>
