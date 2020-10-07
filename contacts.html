@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>
+        Liaison - Contacts
+    </title>
+    <!--javascript-->
+    <script type="text/javascript" src="js/md5.js"></script>
+    <script type="text/javascript" src="js/code.js"></script>
+    <script type="text/javascript" src="js/display.js"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--css-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <!--favicon-->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: #202225;">
+            <div class="container-fluid d-flex flex-column">
+                <div class="navbar-brand sidebar-brand col-xl-12">
+                    <h1 class="display-3 text-left">
+                        <!-- header with home link -->
+                        <a href="contacts.html" style="color: white" title="Home" onmouseover="this.style.textDecoration='none';">
+                            Liaison
+                        </a>
+                        
+                        <!-- logout button -->
+                        <button class="btn btn-sm blue" type="button" title="Log Out"
+                            style="text-align: center; font-size: 16px;
+                                border-width: 0px; height: 38px; float: right; margin-top: 30px; margin-right: 20px"
+                            onclick="doLogout();">
+                            Log Out 
+                        </button>
+                    
+                    </h1>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+        
+        <div>
+            <div id="content" style="background: #64d19d url(../../assets/img/greenbluegradient.jpg); min-height: 89vh; padding-bottom: 1px">
+                <div class="mb-4" style="padding: 8px; margin: 0px; background: #2f3136; min-height: 38px">
+                    <div>
+                        <form class="form-inline d-none d-sm-inline-block navbar-search" style="color: #202225;">
+                            <div class="input-group-append">
+                                <input class="form-control border-0 text-light" type="text" placeholder="Search contacts..." style="background: #40444b; width: 250px" id="query">
+                                <div class="input-group">
+                                    <button class="btn blue" type="button" onclick="handleSearchQuery()" title="Search">
+                                        <i class="ion-ios-search-strong" style="color:white">
+                                        </i>
+                                    </button>
+                                </div>
+                                <!-- home button -->
+                                 <a href="contacts.html" style="color:white;" title="Home">
+                                <button class="btn green" type="button" style="margin-left: 10px">
+                                        <i class="ion-android-home">
+                                        </i> 
+                                </button>
+                                </a>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="container-fluid">
+                
+                    <!-- first row -->
+                    <div class="row mb-3" id="contactResult">
+                        
+                        
+                        <!-- new contact card -->
+                        <div class="col-sm-6 col-xl-3" id="newContact" style= "padding-bottom: 25px; margin-top: -8px;">
+                            <div class="card mb-3" style="border-width: 0px;">
+                            </div>
+                            <div class="card shadow" style="border-width: 0px;">
+                                <!-- changed height -->
+                                <div class="card-header py-3" style="height: 57px; background: #2f3136; border-width: 0px;"> 
+                                    <input class="form-control font-weight-bold" type="text" placeholder="Enter a new first name..."
+                                    style="background: #cccccc; border-width: 0px;" id="firstName">
+                                </div>
+                                <!-- changed height -->
+                                <div class="card-header" style="height: 63px; background: #2f3136; border-width: 0px;">
+                                    <input class="form-control font-weight-bold" type="text" placeholder="Enter a new last name..."
+                                    style="background: #cccccc; border-width: 0px;" id="lastName">
+                                </div>
+                                <div class="card-body" style="background: #36393f;">
+                                    <form>
+                                        <div class="form-group text-light">
+                                            <label>
+                                                Phone Number<br>
+                                            </label>
+                                            <input class="form-control text-dark" type="tel"
+                                            style="background: #cccccc; border-width: 0px;" placeholder="Enter a new phone number..." id="phone">
+                                        </div>
+                                        <div class="form-group text-light">
+                                            <label>
+                                                Email<br>
+                                            </label>
+                                            <input class="form-control" type="email"
+                                            style="background: #cccccc; border-width: 0px;" placeholder="Enter a new email..." id="email">
+                                        </div>
+                                        <div class="form-group" style="margin: 0px; height: 37px;">
+                                            <button class="btn btn-sm green" type="button" style="text-align: center; font-size: 14px;
+                                                border-width: 0px; height: 38px; width: 38px; font-size: 16px"
+                                                onclick=doAddContact() title="Add New Contact">
+                                                    <i class="ion-android-person-add" style="color:white">
+                                                    </i>
+                                            </button>
+                                            
+                                            <span id="contactAddResult"></span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end of new contact card-->
+                
+                    </div>
+                    <!-- end of first row-->
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
